@@ -11,7 +11,9 @@ class DailyForecastWidget extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(32)),
       color: cardColor,
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+        padding: EdgeInsets.symmetric(
+            vertical: 16,
+            horizontal: MediaQuery.of(context).size.width > 480 ? 32 : 8),
         child: Container(
           width: 420,
           child: Column(
@@ -48,7 +50,8 @@ class DayForecast extends StatelessWidget {
         Container(
           width: 125,
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(
+                MediaQuery.of(context).size.width > 480 ? 8.0 : 2),
             child:
                 Text(dailyForecast.day, style: const TextStyle(fontSize: 18)),
           ),
@@ -62,21 +65,24 @@ class DayForecast extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding:
+              EdgeInsets.all(MediaQuery.of(context).size.width > 480 ? 8 : 2),
           child: Text(
             "${dailyForecast.minTemp}°C",
             style: const TextStyle(fontSize: 18),
           ),
         ),
-        const Padding(
-          padding: EdgeInsets.all(8.0),
+        Padding(
+          padding:
+              EdgeInsets.all(MediaQuery.of(context).size.width > 480 ? 8 : 2),
           child: Text(
-            "------",
+            MediaQuery.of(context).size.width > 480 ? "------" : "--",
             style: TextStyle(fontSize: 20),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding:
+              EdgeInsets.all(MediaQuery.of(context).size.width > 480 ? 8 : 2),
           child: Text(
             "${dailyForecast.maxTemp}°C",
             style: const TextStyle(fontSize: 18),

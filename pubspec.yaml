@@ -10,8 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts:
-  image_network: ^2.5.4+1  
-  http:
+    
 
 dev_dependencies:
   flutter_test:

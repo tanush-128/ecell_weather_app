@@ -28,8 +28,10 @@ class HourlyForecast extends StatelessWidget {
                 endIndent: 5,
               ),
               Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                child: Wrap(
+                  alignment: WrapAlignment.spaceBetween,
+
+                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     for (HourForecast hourForecast
                         in weatherData.hourlyForecasts)

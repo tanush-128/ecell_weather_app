@@ -37,7 +37,7 @@ class CurrentTemp extends StatelessWidget {
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(0),
                     child: Image(
                       image: NetworkImage(
                         weatherData.currentTempIcon,
