@@ -11,7 +11,7 @@ import 'package:google_fonts/google_fonts.dart';
 var cardColor = Colors.grey.withOpacity(0.25);
 void main() {
   runApp(MainApp(
-    place: "delhi",
+    place: "varanasi",
   ));
 }
 
@@ -97,6 +97,7 @@ class MobileScreen extends StatelessWidget {
               style: TextStyle(fontSize: 32),
             ),
             Container(
+              color: Colors.transparent,
               width: 420,
               child: TextField(
                 onSubmitted: (value) {
@@ -117,6 +118,7 @@ class MobileScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(32),
                   ),
                   filled: true,
+                  // fillColor: Colors.black.withOpacity(0.9),
                   fillColor: cardColor,
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide.none,

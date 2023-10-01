@@ -13,13 +13,13 @@ class DailyForecastWidget extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.symmetric(
             vertical: 16,
-            horizontal: MediaQuery.of(context).size.width > 480 ? 32 : 8),
+            horizontal: MediaQuery.of(context).size.width > 520 ? 32 : 8),
         child: Container(
           width: 420,
           child: Column(
             children: [
               const Text(
-                "5-day Forecast",
+                "3-day Forecast",
                 style: TextStyle(fontSize: 20),
               ),
               const Divider(
@@ -46,12 +46,13 @@ class DayForecast extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          width: 125,
+          width: 100,
           child: Padding(
             padding: EdgeInsets.all(
-                MediaQuery.of(context).size.width > 480 ? 8.0 : 2),
+                MediaQuery.of(context).size.width > 520 ? 4.0 : 2),
             child:
                 Text(dailyForecast.day, style: const TextStyle(fontSize: 18)),
           ),
@@ -66,23 +67,26 @@ class DayForecast extends StatelessWidget {
         ),
         Padding(
           padding:
-              EdgeInsets.all(MediaQuery.of(context).size.width > 480 ? 8 : 2),
-          child: Text(
-            "${dailyForecast.minTemp}°C",
-            style: const TextStyle(fontSize: 18),
+              EdgeInsets.all(MediaQuery.of(context).size.width > 520 ? 6 : 2),
+          child: Container(
+            width: 60,
+            child: Text(
+              "${dailyForecast.minTemp}°C",
+              style: const TextStyle(fontSize: 18),
+            ),
           ),
         ),
         Padding(
           padding:
-              EdgeInsets.all(MediaQuery.of(context).size.width > 480 ? 8 : 2),
+              EdgeInsets.all(MediaQuery.of(context).size.width > 520 ? 8 : 2),
           child: Text(
-            MediaQuery.of(context).size.width > 480 ? "------" : "--",
+            MediaQuery.of(context).size.width > 520 ? "------" : "--",
             style: TextStyle(fontSize: 20),
           ),
         ),
         Padding(
           padding:
-              EdgeInsets.all(MediaQuery.of(context).size.width > 480 ? 8 : 2),
+              EdgeInsets.all(MediaQuery.of(context).size.width > 520 ? 8 : 2),
           child: Text(
             "${dailyForecast.maxTemp}°C",
             style: const TextStyle(fontSize: 18),

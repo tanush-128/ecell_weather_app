@@ -16,8 +16,8 @@ class HourlyForecast extends StatelessWidget {
           width: 420,
           child: Column(
             children: [
-              const Text(
-                "Thunderstorm expected at 0:00",
+              Text(
+                weatherData.alert,
                 style: TextStyle(fontSize: 20),
               ),
               const Divider(

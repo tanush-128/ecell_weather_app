@@ -20,15 +20,18 @@ class DailyForecast {
 }
 
 class WeatherData {
-  WeatherData(
-      {required this.place,
-      required this.currentTemp,
-      required this.currentTempIcon,
-      required this.hourlyForecasts,
-      required this.dailyForecasts});
+  WeatherData({
+    required this.place,
+    required this.currentTemp,
+    required this.currentTempIcon,
+    required this.hourlyForecasts,
+    required this.dailyForecasts,
+    required this.alert,
+  });
   String place;
   double currentTemp;
   String currentTempIcon;
   List<HourForecast> hourlyForecasts;
   List<DailyForecast> dailyForecasts;
+  String alert;
 }
